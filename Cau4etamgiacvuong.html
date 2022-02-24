@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cm tam giac vuong</title>
+</head>
+<h1 id="result">
+
+</h1>
+<input id="T1" type="text">
+<input id="T2" type="text">
+<input id="T3" type="text">
+<button type="button" onclick="ST1()">click here</button>
+
+<body>
+<script>
+    function ST1() {
+        let A=+document.getElementById('T1').value;
+        let B=+document.getElementById('T2').value;
+        let C=+document.getElementById('T3').value;
+        let kq="";
+        if ( A>0 &&B>0 && C>0 , A < B + C && B < A + C && C < A + B) {
+            kq ='là một tam giác';
+        } else {
+            kq='không phải là ta giác';
+        } if (A===B & B===C) {
+            kq ='LÀ TAM GIÁC ĐỀU'
+        }else if( A===B || B===C || A===C) {
+            kq='LÀ TAM GIÁC CÂN';
+        }
+        if (A * A == B * B + C * C || B * B == C * C + A * A || C * C == A * A + B * B) {
+            kq='LÀ TAM GIÁC VUÔNG';
+        }
+        document.getElementById('result').innerHTML = kq;
+    }
+
+</script>
+
+</body>
+</html>

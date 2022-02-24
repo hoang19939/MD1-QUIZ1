@@ -6,19 +6,39 @@
 </head>
 <body>
 <script>
-    let a,b,c
-    inputa=prompt('enter a');
-    inputb=prompt('enter b');
-    inputc=prompt('enter c');
-    let A=parseInt(inputa);
-    let B=parseInt(inputb);
-    let C=parseInt(inputc);
-    if(A===B){
-        document.write("là tam giác cân tại C")}
-   if(A===C) {
-        document.write('Là tam giac cân tại B')}
-    if(B===C){
+    let a, b, c
+    inputa = prompt('enter a');
+    inputb = prompt('enter b');
+    inputc = prompt('enter c');
+    let A = parseInt(inputa);
+    let B = parseInt(inputb);
+    let C = parseInt(inputc);
+
+    if (A < B + C && B < A + C && C < A + B) {
+        document.write('là 3 cạnh của tam giác');
+
+    } else {
+        document.write('khong phải 3 cạnh của tam giác');
+    }
+    document.write('<br>');
+    if (A === B) {
+        document.write("là tam giác cân tại C")
+        document.write('<br>');
+    }
+    if (A === C) {
+        document.write('Là tam giac cân tại B')
+        document.write('<br>');
+    }
+    if (B === C) {
         document.write('là tam giác cân tại A')
+        document.write('<br>');
+    }
+    if (A * A == B * B + C * C || B * B == C * C + A * A || C * C == A * A + B * B) {
+        document.write("là tam giác vuông")
+        document.write('<br>');
+    }
+    if (A === B === C) {
+        document.write('là tam giác đều');
     }
 </script>
 
